@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Testimonials section</title>
+  </head>
+  <body>
+    <main>
+      <section id="testimonials" class="testimonials"></section>
+    </main>
+
+    <script>
+      const root = document.getElementById("testimonials");
+      const Card = ({ name, title, avatar, intro, quote }) => `
+        <article class="card">
+          <div class="person">
+            <img src=${avatar} alt=${`Avatar of ${name}`} />
+            <div>
+              <strong>${name}</strong>
+              <span>${title}</span>
+            </div>
+          </div>
+
+          <h2>${intro}</h2>
+          <blockquote>${quote}</blockquote>
+        </article>
+      `;
+
+      fetch("data.json")
+        .then((data) => data.json())
+        .then((users) =>
+          users.forEach((user) => (root.innerHTML += Card(user)))
+        );
+    </script>
+  </body>
+</html>
