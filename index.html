@@ -130,13 +130,22 @@
   </head>
   <body>
     <main>
-      <section id="testimonials" class="testimonials"></section>
+      <div
+        role="region"
+        aria-label="Testimonials"
+        id="testimonials"
+        class="testimonials"
+      ></div>
     </main>
 
     <script>
       const root = document.getElementById("testimonials");
       const Card = ({ bgColor, name, title, avatar, intro, quote }) => `
-        <article class="card" style="background-color: ${bgColor};">
+        <article
+          class="card"
+          aria-labelledby="${name.toLowerCase().replaceAll(" ", "-")}-label"
+          style="background-color: ${bgColor};"
+        >
           <div class="person">
             <img src=${avatar} alt="Avatar of ${name}" />
             <div>
@@ -145,7 +154,9 @@
             </div>
           </div>
 
-          <h2>${intro}</h2>
+          <h2 id="${name
+            .toLowerCase()
+            .replaceAll(" ", "-")}-label">${intro}</h2>
           <blockquote>${quote}</blockquote>
         </article>
       `;
