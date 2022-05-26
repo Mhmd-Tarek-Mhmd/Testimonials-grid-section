@@ -5,4 +5,4 @@ This is a solution to the [Testimonials grid section challenge on Frontend Mento
 ## Links
 
 - Live Site [URL](https://mhmd-tarek-mhmd.github.io/Testimonials-grid-section)
-- Solution [URL](https://www.frontendmentor.io/solutions/testimonials-grid-section-)
+- Solution [URL](https://www.frontendmentor.io/solutions/testimonials-grid-section-dXjOws8ZjE)
