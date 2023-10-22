@@ -25,6 +25,14 @@
         background-color: hsl(210, 46%, 95%);
       }
 
+      /* Utilities */
+      .sr-only {
+        width: 1px;
+        height: 1px;
+        position: absolute;
+        clip: rect(0 0 0 0); 
+      }
+
       /*
         Testimonials
       */
@@ -129,6 +137,9 @@
     </style>
   </head>
   <body>
+    <header class="sr-only">
+      <h1>Testimonials Grid</h1>
+    </header>
     <main>
       <div
         role="region"
